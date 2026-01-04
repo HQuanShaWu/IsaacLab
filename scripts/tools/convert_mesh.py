@@ -78,6 +78,12 @@ parser.add_argument(
     default=None,
     help="The mass (in kg) to assign to the converted asset. If not provided, then no mass is added.",
 )
+parser.add_argument(
+    "--scale",
+    type=float,
+    default=1.0,
+    help="Uniform scale applied to the imported mesh (USD meters). Example: 0.01 for cm->m, 0.001 for mm->m.",
+)
 # append AppLauncher cli args
 AppLauncher.add_app_launcher_args(parser)
 # parse the arguments
@@ -157,6 +163,7 @@ def main():
         usd_file_name=os.path.basename(dest_path),
         make_instanceable=args_cli.make_instanceable,
         mesh_collision_props=collision_cfg,
+        scale=(args_cli.scale, args_cli.scale, args_cli.scale),
     )
 
     # Print info

@@ -69,3 +69,12 @@ tests/
 
 # Docker history
 .isaac-lab-docker-history
+
+# no specific extension
+/tron1-rl-isaaclab/
+
+# no moon assets
+source/isaaclab/isaaclab/assets/moon
+
+# no backup
+rsl_rl_backup

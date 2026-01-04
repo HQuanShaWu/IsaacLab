@@ -89,6 +89,7 @@ class H1RoughDemo:
         env_cfg.scene.num_envs = 25
         env_cfg.episode_length_s = 1000000
         env_cfg.curriculum = None
+        env_cfg.sim.gravity = (0,0,-1.62)
         env_cfg.commands.base_velocity.ranges.lin_vel_x = (0.0, 1.0)
         env_cfg.commands.base_velocity.ranges.heading = (-1.0, 1.0)
         # wrap around environment for rsl-rl
