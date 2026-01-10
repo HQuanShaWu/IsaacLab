@@ -78,3 +78,6 @@ source/isaaclab/isaaclab/assets/moon
 
 # no backup
 rsl_rl_backup
+
+# no temp
+temp*
